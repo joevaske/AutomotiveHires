@@ -1,0 +1,29 @@
+footer {
+  width: 100vw;
+  text-align: center;
+  background-color: rgba(132, 110, 150, 0.5);
+  padding: 5px;
+}
+.footer-container p {
+  color: #6d6d6d;
+}
+.footer a {
+  color: rgb(175, 175, 175);
+  transition: all 0.4s ease-out;
+}
+.footer a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.footer {
+  width: 100%;
+  padding: 20px 10px;
+  line-height: 18px;
+  background-color: #0e0e0e;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-container {
+  text-align: center;
+}

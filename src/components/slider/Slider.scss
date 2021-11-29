@@ -1,0 +1,146 @@
+.single-slide {
+  &__text {
+    color: #f2f2f2;
+    font-size: 14px;
+    font-weight: 200;
+    padding: 5px 0px;
+    bottom: 0px;
+
+    display: block;
+    text-align: left;
+
+    margin-bottom: 25px;
+  }
+  &__text a {
+    color: white;
+    display: block;
+    background-color: #0e0e0e8f;
+    margin-bottom: 5px;
+    padding: 5px 80px 5px 10px;
+    cursor: pointer;
+    transition: all 0.8s ease-in-out;
+  }
+
+  &__text a:hover {
+    padding: 5px 10px 5px 80px;
+  }
+  &__text p:nth-child(2) {
+    font-size: 22px;
+  }
+}
+.carousel .control-dots {
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .single-slide {
+    &__text {
+      bottom: 0px;
+      padding: 5px 0px;
+      font-size: 22px;
+    }
+
+    &__text p:nth-child(2) {
+      font-size: 30px;
+    }
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .single-slide {
+    &__text {
+      font-size: 24px;
+      position: absolute;
+      top: 60%;
+      left: 5%;
+      transform: translateY(-50%);
+
+      display: block;
+      text-align: left;
+    }
+    &__text a {
+      background-color: #0e0e0e8f !important;
+    }
+    &__text p:nth-child(2) {
+      font-size: 40px;
+    }
+  }
+}
+
+/* .slide {
+  position: relative;
+
+  .text {
+    color: #f2f2f2;
+    font-size: 28px;
+    font-weight: 200;
+    padding: 8px 12px;
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: auto;
+    display: block;
+    text-align: left;
+  }
+  .text a {
+    color: white;
+    display: block;
+    background-color: #0e0e0e8f;
+    margin-bottom: 5px;
+    padding: 5px 80px 5px 10px;
+    cursor: pointer;
+    transition: all 0.8s ease-in-out;
+  }
+  .text a:hover {
+    padding: 5px 10px 5px 80px;
+  }
+  .text p:nth-child(2) {
+    font-size: 48px;
+  }
+} */
+/* 
+@media only screen and (max-width: 1250px) {
+  .slide {
+    .text {
+      font-size: 22px;
+    }
+    .text a {
+      background-color: #0e0e0e8f !important;
+    }
+  }
+}
+@media only screen and (max-width: 960px) {
+  .slide {
+    .text {
+      bottom: 0%;
+      left: 0%;
+      transform: translateY(100%);
+      width: 100%;
+      padding: 5px 0px;
+    }
+
+    .text p:nth-child(2) {
+      font-size: 30px;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .slide {
+    .text {
+      font-size: 14px;
+    }
+    .text p:nth-child(2) {
+      font-size: 22px;
+    }
+  }
+} */

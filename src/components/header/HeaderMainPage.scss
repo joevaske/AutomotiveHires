@@ -1,0 +1,30 @@
+.header {
+  position: absolute;
+  width: 100vw;
+  padding: 10px 10px 10px 5%;
+  top: 0;
+  z-index: 10;
+  height: auto;
+}
+.header .logo {
+  width: 80px;
+  margin-left: 20px;
+}
+.header .logo {
+  margin-right: 40px;
+}
+
+.logo-large {
+  width: 290px !important;
+}
+.logo-medium {
+  width: 200px !important;
+  padding-bottom: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+  .header .logo {
+    width: 132px;
+    opacity: 1;
+  }
+}

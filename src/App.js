@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Blog from './components/pages/Blog';
+import Home from './components/pages/Home';
 
-function App() {
+import BlogState from './context/blog/BlogState';
+
+import './App.css';
+import BlogSingle from './components/pages/BlogSingle';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BlogState>
+      <Router>
+        <Fragment>
+          <Routes>
+            <Route path='/' element={<Home />} exact></Route>
+            <Route path='/blog' element={<Blog />} exact></Route>
+            <Route
+              path='/blog-single/:id'
+              element={<BlogSingle />}
+              exact
+            ></Route>
+          </Routes>
+        </Fragment>
+      </Router>
+    </BlogState>
   );
-}
+};
 
 export default App;
