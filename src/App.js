@@ -7,6 +7,9 @@ import BlogState from './context/blog/BlogState';
 
 import './App.css';
 import BlogSingle from './components/pages/BlogSingle';
+import AddPost from './components/admin/pages/AddPost';
+import AllPosts from './components/admin/pages/AllPosts';
+import EditPost from './components/admin/pages/EditPost';
 
 const App = () => {
   return (
@@ -19,6 +22,13 @@ const App = () => {
             <Route
               path='/blog-single/:id'
               element={<BlogSingle />}
+              exact
+            ></Route>
+            <Route path='/admin/add-post' element={<AddPost />} exact></Route>
+            <Route path='/admin/all-posts' element={<AllPosts />} exact></Route>
+            <Route
+              path='/admin/edit-post/:id'
+              element={<EditPost />}
               exact
             ></Route>
           </Routes>

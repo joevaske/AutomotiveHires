@@ -1,12 +1,10 @@
-import React, { Fragment, useContext, useEffect, useState } from 'react';
+import React, { Fragment, useContext } from 'react';
 import parse from 'html-react-parser';
 import BlogContext from '../../context/blog/blogContext';
 
 import Loading from '../loading/Loading';
 import Hashtag from '../hashtag/Hashtag';
 import HeaderBlogPage from '../header/HeaderBlogPage';
-
-import PageHeading from '../page-heading/PageHeading';
 
 const BlogSingle = () => {
   const blogContext = useContext(BlogContext);
@@ -20,8 +18,7 @@ const BlogSingle = () => {
       <Fragment>
         <HeaderBlogPage />
         <Hashtag />
-        <PageHeading headingTitle={blog[0].title} />
-        <div className='container'>{parse(blog[0].text)}</div>
+        <div className='container'>{parse(blog.blogText)}</div>
       </Fragment>
     );
   }

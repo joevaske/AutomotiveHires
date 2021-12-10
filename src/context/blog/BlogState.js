@@ -6,7 +6,8 @@ import BlogReducer from './blogReducer';
 import {
   GET_BLOGS,
   GET_BLOG,
-  CREATE_BLOG,
+  ADD_BLOG,
+  EDIT_BLOG,
   DELETE_BLOG,
   SET_LOADING,
   SET_ALERT,
@@ -38,18 +39,44 @@ const BlogState = (props) => {
   const getBlog = async (id) => {
     setLoading();
     const res = await axios.get(`http://localhost:8000/Blogs?id=${id}`);
+    console.log(res.data[0]);
 
     dispatch({
       type: GET_BLOG,
-      payload: res.data,
+      payload: res.data[0],
     });
   };
 
-  // Create blog
+  // Add blog   ----  create blog
+
+  const addBlog = async (blog) => {
+    setLoading();
+    axios.post('http://localhost:8000/Blogs', { ...blog });
+
+    dispatch({
+      type: ADD_BLOG,
+      payload: blog,
+    });
+  };
 
   // Edit Blog
+  const editBlog = async (id, post) => {
+    setLoading();
+    axios.put(`http://localhost:8000/Blogs/${id}`, post);
+    dispatch({
+      type: EDIT_BLOG,
+      payload: post,
+    });
+  };
 
   // Delete Blog
+
+  const deleteBlog = (id) => {
+    dispatch({
+      type: DELETE_BLOG,
+      payload: id,
+    });
+  };
 
   // Set Loading
 
@@ -63,6 +90,9 @@ const BlogState = (props) => {
         loading: state.loading,
         getBlogs,
         getBlog,
+        addBlog,
+        editBlog,
+        deleteBlog,
       }}
     >
       {props.children}

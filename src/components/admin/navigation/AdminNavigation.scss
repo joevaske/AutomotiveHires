@@ -1,0 +1,32 @@
+.admin-navigation {
+  background-color: black;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    li {
+      margin-right: 20px;
+
+      a {
+        display: block;
+        padding: 10px 20px;
+      }
+
+      a:hover {
+        color: white;
+      }
+      a:active {
+        color: white;
+      }
+    }
+  }
+  ul:last-child li a {
+    color: gray;
+  }
+}

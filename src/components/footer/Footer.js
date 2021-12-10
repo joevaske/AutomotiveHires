@@ -6,7 +6,7 @@ const Footer = () => {
       <div className='footer-container'>
         <p className='light-text'>
           Copyright &copy; 2021 &nbsp;
-          <a href='http://rt-rk.com' target='_blank'>
+          <a href='http://rt-rk.com' target='_blank' rel='noreferrer'>
             RT-RK Institute for Computer Based Systems
           </a>
           . All Rights Reserved.
